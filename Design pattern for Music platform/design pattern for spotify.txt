@@ -1,0 +1,31 @@
+Music streaming service(spotify):
+
+User management: Singleton (Creational)	
+		Singleton because Ensures that there 
+		is only one instance managing user sessions across the application.
+		(to ensure that it Prevents multiple conflicting user management systems.)
+
+Music search and Recommendations:  Strategy ( Behavioral )
+				Different algorithms can be used to give better recommendations based on the user patterns, interests.
+				It improves flexibility and scalability of search and recommendation systems.
+
+Music Streaming : proxy (structural) 
+		To handle the remote music file access and stream efficiently by caching and controlling access.
+		IF a user req a song the req from the user directly goes to the proxy instead of the server to check if the song is already cached 
+		and it also ensures that only authorized users can access the file, or it can provide premium only features to users.
+
+Notification : Observer ( Behavioral )
+		Notify users about new songs, updates to playlists.
+
+
+Mutlithreading can be used :
+
+
+	Music streaming and downloading
+-A separate thread can handle downloading and buffering the music file while the main thread manages the user interface
+
+	Notifications
+-Notifications can be runned in a separate thread to avoid interfering with the main applicaiton.
+	
+	Data Synchronization
+-background threads can sync user data 
