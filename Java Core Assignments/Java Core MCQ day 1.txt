@@ -65,7 +65,7 @@ d) 7
 
 
 
-ans:6
+ans:B
 
 
 
@@ -161,7 +161,7 @@ class Output
  { 
  boolean a = true;
  boolean b = false;
- boolean c = a ^ b;
+ boolean c = a ^ b; // XOR
  System.out.println(!c);
  } 
  }
