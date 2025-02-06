@@ -1,0 +1,669 @@
+1) What will be the output of the following Java program if input given is ‘abcqfghqbcd’?
+class Input_Output
+ {
+ public static void main(String args[]) throws IOException
+ {
+ char c;
+ BufferedReader obj = new BufferedReader(new InputStreamReader(System.in));
+ do
+ {
+ c = (char) obj.read();
+ System.out.print(c);
+ } while(c != 'q');
+ }
+ }
+a) abcqfgh
+b) abc
+c) abcq
+d) abcqfghq
+
+
+ans:B
+
+
+2) What will be the output of the following Java program if input given is “abc’def/’egh”?
+class Input_Output
+ {
+ public static void main(String args[]) throws IOException
+ {
+ char c;
+ BufferedReader obj = new BufferedReader(new InputStreamReader(System.in));
+ do 
+ {
+ c = (char) obj.read();
+ System.out.print(c);
+ } while(c!='\'');
+ }
+ }
+a) abc’
+b) abcdef/’
+c) abc’def/’egh
+d) abcqfghq
+
+
+
+
+ans: C
+
+
+
+
+
+3) What will be the output of the following Java program?
+class output
+ {
+ public static void main(String args[])
+ { 
+ StringBuffer c = new StringBuffer("Hello");
+ System.out.println(c.length());
+ }
+ }
+a) 4
+b) 5
+c) 6
+d) 7
+
+
+
+ans:6
+
+
+
+4) What will be the output of the following Java code?
+class Relational_operator 
+ {
+ public static void main(String args[])
+ {
+ int var1 = 5; 
+ int var2 = 6;
+ System.out.print(var1 > var2);
+ } 
+ }
+a) 1
+b) 0
+c) true
+d) false
+
+
+
+ans:D
+
+
+5) What will be the output of the following Java code?
+class bool_operator 
+ {
+ public static void main(String args[]) 
+ { 
+ boolean a = true;
+ boolean b = !true;
+ boolean c = a | b;
+ boolean d = a & b;
+ boolean e = d ? b : c;
+ System.out.println(d + " " + e);
+ } 
+ }
+a) false false
+b) true ture
+c) true false
+d) false true
+
+
+ans: A
+
+
+6) What will be the output of the following Java code?
+class ternary_operator 
+ {
+ public static void main(String args[]) 
+ { 
+ int x = 3;
+ int y = ~ x;
+ int z;
+ z = x > y ? x : y;
+ System.out.print(z);
+ } 
+ }
+a) 0
+b) 1
+c) 3
+d) -4
+
+
+ans:c
+
+
+7) What will be the output of the following Java code?
+class Output 
+ {
+ public static void main(String args[]) 
+ { 
+ int x , y = 1;
+ x = 10;
+ if (x != 10 && x / 0 == 0)
+ System.out.println(y);
+ else
+ System.out.println(++y);
+ } 
+ }
+a) 1
+b) 2
+c) Runtime error owing to division by zero in if condition
+d) Unpredictable behavior of program
+
+
+ans:A
+
+
+8) What will be the output of the following Java code?
+class Output 
+ {
+ public static void main(String args[]) 
+ { 
+ boolean a = true;
+ boolean b = false;
+ boolean c = a ^ b;
+ System.out.println(!c);
+ } 
+ }
+a) 0
+b) 1
+c) false
+d) true
+
+
+ans:C
+
+
+9) 5. At line number 2 in the following code, choose 3 valid data-type attributes/qualifiers among 
+“final, static, native, public, private, abstract, protected”
+public interface Status
+ {
+ /* insert qualifier here */ int MY_VALUE = 10;
+ }
+
+
+ans:final, public, private
+
+
+10) What will be the output of the following Java program?
+class Alligator 
+{
+ public static void main(String[] args) 
+ {
+ int []x[] = {{1,2}, {3,4,5}, {6,7,8,9}};
+ int [][]y = x;
+ System.out.println(y[2][1]);
+ }
+}
+a) 2
+b) 3
+c) 7
+d) Compilation Error
+
+
+ans:D
+
+
+11) What will be the output of the following Java program?
+ final class A 
+ {
+ int i;
+ } 
+ class B extends A 
+ {
+ int j;
+ System.out.println(j + " " + i); 
+ } 
+ class inheritance 
+ {
+ public static void main(String args[])
+ {
+ B obj = new B();
+ obj.display(); 
+ }
+ }
+a) 2 2
+b) 3 3
+c) Runtime Error
+d) Compilation Error
+
+
+ans:C
+
+
+12) What will be the output of the following Java program?
+ class Abc
+ {
+ public static void main(String[]args)
+ {
+ String[] elements = { "for", "tea", "too" };
+ String first = (elements.length > 0) ? elements[0]: null;
+ }
+ }
+a) Compilation error
+b) An exception is thrown at run time
+c) The variable first is set to null
+d) The variable first is set to elements[0]
+
+
+ans:D
+
+
+13) What will be the output of the following Java program?
+ class A 
+ {
+ int i;
+ public void display() 
+ {
+ System.out.println(i);
+ } 
+ } 
+ class B extends A 
+ {
+ int j;
+ public void display() 
+ {
+ System.out.println(j);
+ } 
+ } 
+ class Dynamic_dispatch 
+ {
+ public static void main(String args[])
+ {
+ B obj2 = new B();
+ obj2.i = 1;
+ obj2.j = 2;
+ A r;
+ r = obj2;
+ r.display(); 
+ }
+ }
+a) 1
+b) 2
+c) 3
+d) 4
+
+
+ans:B
+
+
+14) In the following Java code, what can directly access and change the value of 
+the variable name?
+package test;
+class Target 
+{
+ public String name = "hello";
+}
+a) any class
+b) only the Target class
+c) any class in the test package
+d) any class that extends Target
+
+
+
+ans:C
+
+
+15) What will be the output of the following Java code?
+public class Boxer1 
+{
+ Integer i;
+ int x;
+ public Boxer1(int y) 
+ {
+ x = i+y;
+ System.out.println(x);
+ }
+ public static void main(String[] args) 
+ {
+ new Boxer1 (new Integer(4));
+ }
+}
+a) The value “4” is printed at the command line
+b) Compilation fails because of an error in line
+c) A NullPointerException occurs at runtime
+d) An IllegalStateException occurs at runtime
+
+
+ans:NS / D
+
+
+16) What will be the output of the following Java code?
+ class output 
+ {
+ public static void main(String args[])
+ { 
+ String c = "Hello i love java";
+ int start = 2;
+ int end = 9;
+ char s[]=new char[end-start];
+ c.getChars(start,end,s,0);
+ System.out.println(s);
+ }
+ }
+a) Hello, i love java
+b) i love ja
+c) lo i lo
+d) llo i l
+
+
+ans: D
+
+
+17) What will be the output of the following Java code?
+class output 
+ {
+ public static void main(String args[])
+ {
+ String a = "hello i love java";
+ System.out.println(a.indexOf('i')+" "+a.indexOf('o') +" 
+"+a.lastIndexOf('i')+" "+a.lastIndexOf('o'));
+ }
+ }
+a) 6 4 6 9
+b) 5 4 5 9
+c) 7 8 8 9
+d) 4 3 6 9
+
+
+ans:A
+
+
+18) What will be the output of the following Java code?
+ class output 
+ {
+ public static void main(String args[])
+ {
+ char c[]={'a', '1', 'b' ,' ' ,'A' , '0'};
+ for (int i = 0; i < 5; ++i)
+ {
+ if(Character.isDigit(c[i]))
+ System.out.println(c[i]+" is a digit");
+ if(Character.isWhitespace(c[i]))
+ System.out.println(c[i]+" is a Whitespace character");
+ if(Character.isUpperCase(c[i]))
+ System.out.println(c[i]+" is an Upper case Letter");
+ if(Character.isLowerCase(c[i]))
+ System.out.println(c[i]+" is a lower case Letter");
+ i=i+3;
+ }
+ }
+ }
+a)
+ a is a lower case Letter
+ is White space character
+b)
+ b is a lower case Letter
+ is White space character
+c)
+ a is a lower case Letter
+ A is an upper case Letter
+d)
+ a is a lower case Letter
+ 0 is a digit
+
+
+
+ans: A
+
+
+19) What will be the output of the following Java code?
+ class output 
+ {
+ public static void main(String args[])
+ {
+ char ch;
+ ch = "hello".charAt(1);
+ System.out.println(ch);
+ }
+ }
+a) h
+b) e
+c) l
+d) o
+
+
+ans:B
+
+
+20) What will be the output of the following Java code?
+ class average {
+ public static void main(String args[])
+ {
+ double num[] = {5.5, 10.1, 11, 12.8, 56.9, 2.5};
+ double result;
+ result = 0;
+ for (int i = 0; i < 6; ++i) 
+ result = result + num[i];
+ System.out.print(result/6);
+ } 
+ }
+a) 16.34
+b) 16.566666644
+c) 16.46666666666667
+d) 16.46666666666666
+
+
+ans: NS / B
+
+
+21) What will be the output of the following Java statement?
+class output {
+ public static void main(String args[]) 
+ {
+ double a, b,c;
+ a = 3.0/0;
+ b = 0/4.0;
+ c=0/0.0;
+ System.out.println(a);
+ System.out.println(b);
+ System.out.println(c);
+ } 
+ }
+a) Infinity
+b) 0.0
+c) NaN
+d) all of the mentioned
+
+
+ans:D
+
+
+22) What will be the output of the following Java code?
+ class increment {
+ public static void main(String args[]) 
+ { 
+ int g = 3;
+ System.out.print(++g * 8);
+ } 
+ }
+a) 25
+b) 24
+c) 32
+d) 33
+
+
+ans:B
+
+
+23) What will be the output of the following Java code?
+ class area {
+ public static void main(String args[]) 
+ { 
+ double r, pi, a;
+ r = 9.8;
+ pi = 3.14;
+ a = pi * r * r;
+ System.out.println(a);
+ } 
+ }
+a) 301.5656
+b) 301
+c) 301.56
+d) 301.56560000
+
+
+ans:D
+
+
+24) What will be the output of the following Java code snippet?
+double a = 0.02;
+ double b = 0.03;
+ double c = b - a;
+ System.out.println(c);
+ BigDecimal _a = new BigDecimal("0.02");
+ BigDecimal _b = new BigDecimal("0.03");
+ BigDecimal _c = b.subtract(_a);
+ System.out.println(_c);
+a)
+ 0.009999999999999998
+ 0.01
+b)
+ 0.01
+ 0.009999999999999998
+c)
+ 0.01
+ 0.01
+d)
+ 0.009999999999999998
+ 0.009999999999999998
+
+
+
+
+ans:B
+
+
+25) What will be the output of the following Java code snippet?
+public class AddDemo 
+{
+public static void main(String args[]) 
+ {
+BigDecimal b = new BigDecimal("23.43");
+BigDecimal br = new BigDecimal("24");
+BigDecimal bres = b.add(new BigDecimal("450.23"));
+System.out.println("Add: "+bres);
+MathContext mc = new MathContext(2, RoundingMode.DOWN);
+BigDecimal bdecMath = b.add(new BigDecimal("450.23"), mc);
+System.out.println("Add using MathContext: "+bdecMath);
+}
+}
+a) Compilation failure
+b)
+Add: 473.66
+Add using MathContext: 4.7E+2
+c)
+Add 4.7E+2
+Add using MathContext: 473.66
+
+
+ans: NS / B
+
+
+
+26) What is the prototype of the default constructor of this Java class?
+ public class prototype { }
+a) prototype( )
+b) prototype(void)
+c) public prototype(void)
+d) public prototype( )
+
+ans:A
+
+
+27) What will be the output of the following Java code?
+ class char_increment 
+ {
+ public static void main(String args[]) 
+ {
+ char c1 = 'D';
+ char c2 = 84;
+ c2++;
+ c1++;
+ System.out.println(c1 + " " + c2);
+ } 
+ }
+a) E U
+b) U E
+c) V E
+d) U F
+
+
+
+ans:A
+
+
+
+28) What will be the output of the following Java code?
+ class conversion 
+ {
+ public static void main(String args[]) 
+ {
+ double a = 295.04;
+ int b = 300;
+ byte c = (byte) a;
+ byte d = (byte) b;
+ System.out.println(c + " " + d);
+ } 
+ }
+a) 38 43
+b) 39 44
+c) 295 300
+d) 295.04 300
+
+
+ans:NS / D
+
+
+29) What will be the output of the following Java code?
+ class A 
+ {
+ final public int calculate(int a, int b) { return 1; } 
+ } 
+ class B extends A 
+ { 
+ public int calculate(int a, int b) { return 2; } 
+ } 
+ public class output 
+ {
+ public static void main(String args[]) 
+ { 
+ B object = new B(); 
+ System.out.print("b is " + b.calculate(0, 1)); 
+ } 
+ }
+a) b is : 2
+b) b is : 1
+c) Compilation Error
+d) An exception is thrown at runtime
+
+
+ans: D
+
+
+30) What will be the output of the following Java program, if we run as “java 
+main_arguments 1 2 3”?
+ class main_arguments 
+ {
+ public static void main(String [] args) 
+ {
+ String [][] argument = new String[2][2];
+ int x;
+ argument[0] = args;
+ x = argument[0].length;
+ for (int y = 0; y < x; y++) 
+ System.out.print(" " + argument[0][y]); 
+ }
+ }
+a) 1 1
+b) 1 0
+c) 1 0 3
+d) 1 2 3
+
+
+ans: B
+
+
+--------------------------------------------------------------------------------
+ALL THE BEST
+--------------------------------------------------------------------------------
